@@ -1,0 +1,105 @@
+:root {
+  --primary-bg-color: #1F2E2A;
+  --primary-text-color: #E6E1D6; 
+  --primary-cards: #3A2F28;
+  --primary-cards-hover: rgb(107, 83, 67);
+  --highlights: #b08d57;
+}
+
+* {
+  font-family: "Shafarik", system-ui, serif;
+}
+
+html, body {
+  background-color: #373737;
+}
+
+#wrapper {
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 1rem;
+  background-color: var(--primary-bg-color);
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--primary-text-color);
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+  justify-self: center;
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  height: 75vh;
+  width: 75vh;
+  margin: auto;
+  padding: 1rem;
+  perspective: 900px;
+}
+
+main > :first-child {
+  grid-column-start: 2;
+}
+
+.card {
+  background-color: var(--primary-cards);
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.card:hover {
+  background-color: var(--primary-cards-hover);
+}
+
+.face.front {
+  display: flex;
+  background-color: var(--highlights);
+  border-radius: 0.75rem;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+#score {
+  color: var(--primary-text-color);
+  display: flex;
+  margin: auto;
+  
+}
+
+.score-sheet {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  gap: 2rem;
+  font-size: 2rem;
+  width: 75%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px auto;
+  width: 50%;
+}
+
+#menu button {
+  background-color: var(--primary-bg-color);
+  border: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  width: 15%;
+}
+
+#menu button:hover {
+  background-color: var(--primary-cards-hover);
+}
