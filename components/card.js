@@ -15,10 +15,12 @@ export const Card = ({ id, rune, active, correct, action }) => {
     back.className = 'face back'
     back.hidden = showCard
 
-    if (showCard) {
-        const img = document.createElement('img')
-        img.src = `./resources/runes/${rune}`
-        front.appendChild(img)
+    const img = document.createElement('img')
+    img.src = `./resources/runes/${rune}`
+    front.appendChild(img)
+
+    if (!showCard) {
+        img.hidden = true
     }
 
     div.appendChild(front)
@@ -41,4 +43,5 @@ export const Card = ({ id, rune, active, correct, action }) => {
     )
     
     return div
+
 }
